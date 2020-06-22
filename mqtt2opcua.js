@@ -128,7 +128,7 @@ var run = function (options) {
                 top  = (path[0] || path[1]); // Cater for paths starting with "/"
 
             node = paths[top] = (paths.hasOwnProperty(top)) ? paths[top] :
-                                server.engine.addressSpace.addFolder("ObjectsFolder", { browseName: top});
+                                server.engine.addressSpace.addFolder(ObjectsFolder, { browseName: top});
 
             for (sub in path) {
                 if (sub == 0 |!path.hasOwnProperty(sub)) {
